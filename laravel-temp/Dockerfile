@@ -29,8 +29,8 @@ RUN curl -sS https://getcomposer.org/installer | php -- --install-dir=/usr/local
 # Install PHP dependencies
 RUN composer install --no-dev --optimize-autoloader --no-interaction
 
-# Copy package files
-COPY package.json package-lock.json ./
+# Copy package.json
+COPY package.json ./
 
 # Install npm dependencies
 RUN npm install
