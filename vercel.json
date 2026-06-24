@@ -1,6 +1,5 @@
 {
-  "version": 3,
-  "buildCommand": "cd laravel-temp && composer install --prefer-dist --no-dev --optimize-autoloader && npm install && npm run build",
+  "version": 2,
   "builds": [
     {
       "src": "laravel-temp/public/index.php",
