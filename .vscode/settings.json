@@ -1,0 +1,9 @@
+{
+    "python.defaultInterpreterPath": "${workspaceFolder}/chatbot/venv-clean/bin/python3.14",
+    "python.pythonPath": "${workspaceFolder}/chatbot/venv-clean/bin/python3.14",
+    "python.analysis.extraPaths": [
+        "${workspaceFolder}/chatbot/venv-clean/lib/python3.14/site-packages"
+    ],
+    "python.analysis.typeCheckingMode": "off",
+    "python.linting.enabled": false
+}
