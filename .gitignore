@@ -11,3 +11,5 @@ chatbot/venv-clean/
 
 # Vercel deployment files
 .vercel/
+
+CNAME
