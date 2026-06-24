@@ -48,8 +48,11 @@ RUN mkdir -p storage/logs storage/framework/cache storage/framework/views \
 # Set proper permissions
 RUN chown -R www-data:www-data /app
 
+# Generate APP_KEY if not exists
+RUN php artisan key:generate --force || true
+
 # Expose port
 EXPOSE 8000
 
-# Start PHP FPM
-CMD ["php-fpm"]
+# Start Laravel development server
+CMD ["php", "artisan", "serve", "--host=0.0.0.0", "--port=8000"]
