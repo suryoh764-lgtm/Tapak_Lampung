@@ -2,7 +2,7 @@
   "version": 2,
   "builds": [
     {
-      "src": "public/index.php",
+      "src": "public/**/*.php",
       "use": "@vercel/php"
     }
   ],
@@ -11,11 +11,7 @@
       "handle": "filesystem"
     },
     {
-      "src": "^/build/(.*)$",
-      "dest": "/public/build/$1"
-    },
-    {
-      "src": "^/(.*)$",
+      "src": "/(.*)",
       "dest": "/public/index.php"
     }
   ]
