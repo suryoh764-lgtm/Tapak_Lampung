@@ -1,5 +1,6 @@
 {
   "version": 2,
+  "buildCommand": "composer install --prefer-dist --no-dev --optimize-autoloader && npm install && npm run build",
   "routes": [
     {
       "handle": "filesystem"
