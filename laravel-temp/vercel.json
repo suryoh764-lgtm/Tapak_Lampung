@@ -2,7 +2,7 @@
   "version": 2,
   "builds": [
     {
-      "src": "laravel-temp/public/index.php",
+      "src": "public/index.php",
       "use": "@vercel/php"
     }
   ],
@@ -12,11 +12,11 @@
     },
     {
       "src": "^/build/(.*)$",
-      "dest": "laravel-temp/public/build/$1"
+      "dest": "/public/build/$1"
     },
     {
       "src": "^/(.*)$",
-      "dest": "laravel-temp/public/index.php"
+      "dest": "/public/index.php"
     }
   ]
 }
