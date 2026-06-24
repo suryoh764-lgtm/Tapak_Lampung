@@ -1,12 +1,23 @@
 {
   "version": 3,
+  "buildCommand": "cd laravel-temp && composer install --prefer-dist --no-dev --optimize-autoloader && npm install && npm run build",
   "builds": [
     {
-      "src": "laravel-temp/package.json",
-      "use": "@vercel/static-build",
-      "config": {
-        "distDir": "public/build"
-      }
+      "src": "laravel-temp/public/index.php",
+      "use": "@vercel/php"
+    }
+  ],
+  "routes": [
+    {
+      "handle": "filesystem"
+    },
+    {
+      "src": "^/build/(.*)$",
+      "dest": "laravel-temp/public/build/$1"
+    },
+    {
+      "src": "^/(.*)$",
+      "dest": "laravel-temp/public/index.php"
     }
   ]
 }

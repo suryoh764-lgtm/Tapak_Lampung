@@ -1,0 +1,12 @@
+# Exclude unnecessary files from Vercel deployment
+.DS_Store
+backup_tapak_lampung_db_and_code.zip
+chatbot/
+
+# Ignore local Laravel build artifacts and dependencies
+laravel-temp/vendor/
+laravel-temp/node_modules/
+laravel-temp/storage/
+
+# Ignore local editor and OS files
+.vscode/

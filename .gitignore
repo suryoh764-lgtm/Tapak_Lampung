@@ -1,0 +1,13 @@
+.DS_Store
+backup_tapak_lampung_db_and_code.zip
+
+# Laravel and node modules
+laravel-temp/vendor/
+laravel-temp/node_modules/
+laravel-temp/storage/
+
+# local Python environment
+chatbot/venv-clean/
+
+# Vercel deployment files
+.vercel/
