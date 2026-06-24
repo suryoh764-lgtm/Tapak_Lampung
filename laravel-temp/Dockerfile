@@ -48,8 +48,8 @@ RUN mkdir -p storage/logs storage/framework/cache storage/framework/views \
 # Set proper permissions
 RUN chown -R www-data:www-data /app
 
-# Expose port
-EXPOSE 8000
+# Expose Railway's PORT
+EXPOSE ${PORT:-8000}
 
-# Start PHP FPM
-CMD ["php-fpm"]
+# Start Laravel's built-in server on Railway's PORT
+CMD php artisan serve --host=0.0.0.0 --port=${PORT:-8000}
